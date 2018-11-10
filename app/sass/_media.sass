@@ -7,8 +7,32 @@
 +media-breakpoint-down(lg)
 +media-breakpoint-down(md)
 +media-breakpoint-down(sm)
+	.main-header
+		flex-direction: column
+		justify-content: center
+		padding: 10px 0
+		.logo
+			order: 1
+			img
+				width: 120px
+		.contacts
+			order: 2
+			padding: 20px 0
+			.contact-item
+				display: inline-block
+		.social
+			order: 3
+	.main-menu
+		display: none
 +media-breakpoint-down(xs)
-
+	.contacts
+		display: flex
+		flex-direction: column
+		font-size: 14px
+	.social
+		display: none
+	.slider-item-block
+		display: none
 
 /*==========  Mobile First  ==========*/
 
