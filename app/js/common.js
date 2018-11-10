@@ -1,5 +1,10 @@
 $(function() {
 
+	$('#nav-icon').click(function() {
+		$(this).toggleClass('open');
+		$('.menu').slideToggle('slow');
+	});
+
 	$('.s-main').slick({
 		slidesToShow: 1,
 	  slidesToScroll: 1,
@@ -9,9 +14,8 @@ $(function() {
 	  infinite: true,
 	  speed: 500,
 	  fade: true,
-	  cssEase: 'linear'
+	  cssEase: 'linear',
 	});
-
 
 	var mixer = mixitup('.portfolio-container');
 	
