@@ -33,8 +33,8 @@ gulp.task('browser-sync', function() {
 			baseDir: 'app'
 		},
 		notify: false,
-		//tunnel: true,
-		//tunnel: "broyak-travel", //Demonstration page: http://projectname.localtunnel.me
+		tunnel: true,
+		tunnel: "broyak-travel", //Demonstration page: http://projectname.localtunnel.me
 	})
 });
 

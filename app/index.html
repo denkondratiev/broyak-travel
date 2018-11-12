@@ -63,10 +63,10 @@
 		</div>
 		<ul class="menu">
 			<li class="menu-item"><a class="menu-link" href="#">Головна</a></li>
-			<li class="menu-item"><a class="menu-link" href="#">Наші тури</a></li>
-			<li class="menu-item"><a class="menu-link" href="#">Галерея</a></li>
-			<li class="menu-item"><a class="menu-link" href="#">Цікаві статті</a></li>
-			<li class="menu-item"><a class="menu-link" href="#">Контакти</a></li>
+			<li class="menu-item"><a class="menu-link" href="#tours">Наші тури</a></li>
+			<li class="menu-item"><a class="menu-link" href="#gallery">Галерея</a></li>
+			<li class="menu-item"><a class="menu-link" href="#blog">Цікаві статті</a></li>
+			<li class="menu-item"><a class="menu-link" href="#contacts"></a></li>
 		</ul>
 	</div>
 </header>
@@ -126,21 +126,21 @@
 	</div>
 </section>
 
-	<section class="s-portfolio" style="background-image: url(img/WorldMap.png);">
+	<section id="tours" class="s-portfolio" style="background-image: url(img/WorldMap.png);">
 		<div class="section-title">
 			<h3>Наші тури</h3>
 			<span>Оберіть свій найкращій відпочинок разом з нами )</span>
 		</div>
 		<div class="portfolio-filter col-12">
-			<button type="button" data-filter="all">Всі тури</button>
-			<button type="button" data-filter=".category-a">Моря</button>
-			<button type="button" data-filter=".category-b">Гори</button>
-			<button type="button" data-filter=".category-c">Україна</button>
-			<button type="button" data-filter=".category-d">Європа</button>
+			<button type="button" data-filter="all" class="active">Всі тури</button>
+			<button type="button" data-filter=".category-sea">Моря</button>
+			<button type="button" data-filter=".category-mount">Гори</button>
+			<button type="button" data-filter=".category-ukr">Україна</button>
+			<button type="button" data-filter=".category-eu">Європа</button>
 		</div>
 		<div class="portfolio-container container">
 	    <div class="row">
-	    	<div class="mix col-md-4 col-sm-6 category-a" data-order="1">
+	    	<div class="mix col-lg-4 col-sm-6 category-sea" data-order="1">
 	    		<div class="p-item">
 						<div class="p-item-img">
 							<div class="overlay-wrap">
@@ -158,7 +158,7 @@
 		    			<img src="img/main-4.jpg" alt="">
 		    		</div>
 		    		<div class="item-info">
-		    			<h4>Буковель на три дні</h4>
+		    			<a href="#"><h4>Буковель на три дні</h4></a>
 		    			<i class="fa fa-calendar" aria-hidden="true"></i>
 		    			<span class="date">23 - 26 грудня</span>
 		    			<div class="price">
@@ -171,7 +171,7 @@
 		    		</div>
 		    	</div>
 	    	</div>
-		    <div class="mix col-md-4 col-sm-6 category-b" data-order="2">
+		    <div class="mix col-lg-4 col-sm-6 category-mount" data-order="2">
 		    	<div class="p-item">
 						<div class="p-item-img">
 							<div class="overlay-wrap">
@@ -189,7 +189,7 @@
 		    			<img src="img/main-3.jpg" alt="">
 		    		</div>
 		    		<div class="item-info">
-		    			<h4>Буковель на три дні</h4>
+		    			<a href="#"><h4>Буковель на три дні</h4></a>
 		    			<i class="fa fa-calendar" aria-hidden="true"></i>
 		    			<span class="date">23 - 26 грудня</span>
 		    			<div class="price">
@@ -202,7 +202,7 @@
 		    		</div>
 		    	</div>
 		    </div>
-		    <div class="mix col-md-4 col-sm-6 category-b category-c" data-order="3">
+		    <div class="mix col-lg-4 col-sm-6 category-mount category-ukr" data-order="3">
 		    	<div class="p-item">
 						<div class="p-item-img">
 							<div class="overlay-wrap">
@@ -220,7 +220,7 @@
 		    			<img src="img/main-4.jpg" alt="">
 		    		</div>
 		    		<div class="item-info">
-		    			<h4>Буковель на три дні</h4>
+		    			<a href="#"><h4>Буковель на три дні</h4></a>
 		    			<i class="fa fa-calendar" aria-hidden="true"></i>
 		    			<span class="date">23 - 26 грудня</span>
 		    			<div class="price">
@@ -233,7 +233,7 @@
 		    		</div>
 		    	</div>
 		    </div>
-		    <div class="mix col-md-4 col-sm-6 category-a category-d" data-order="4">
+		    <div class="mix col-lg-4 col-sm-6 category-sea category-eu" data-order="4">
 		    	<div class="p-item">
 						<div class="p-item-img">
 							<div class="overlay-wrap">
@@ -251,7 +251,7 @@
 		    			<img src="img/main-3.jpg" alt="">
 		    		</div>
 		    		<div class="item-info">
-		    			<h4>Буковель на три дні</h4>
+		    			<a href="#"><h4>Буковель на три дні</h4></a>
 		    			<i class="fa fa-calendar" aria-hidden="true"></i>
 		    			<span class="date">23 - 26 грудня</span>
 		    			<div class="price">
@@ -264,7 +264,7 @@
 		    		</div>
 		    	</div>
 		    </div>
-		    <div class="mix col-md-4 col-sm-6 category-d category-c" data-order="4">
+		    <div class="mix col-lg-4 col-sm-6 category-d category-c" data-order="4">
 		    	<div class="p-item">
 						<div class="p-item-img">
 							<div class="overlay-wrap">
@@ -282,7 +282,7 @@
 		    			<img src="img/main-4.jpg" alt="">
 		    		</div>
 		    		<div class="item-info">
-		    			<h4>Буковель на три дні</h4>
+		    			<a href="#"><h4>Буковель на три дні</h4></a>
 		    			<i class="fa fa-calendar" aria-hidden="true"></i>
 		    			<span class="date">23 - 26 грудня</span>
 		    			<div class="price">
@@ -295,7 +295,7 @@
 		    		</div>
 		    	</div>
 		    </div>
-		    <div class="mix col-md-4 col-sm-6 category-b category-d" data-order="3">
+		    <div class="mix col-lg-4 col-sm-6 category-b category-d" data-order="3">
 		    	<div class="p-item">
 						<div class="p-item">
 						<div class="p-item-img">
@@ -314,7 +314,7 @@
 		    			<img src="img/main-3.jpg" alt="">
 		    		</div>
 		    		<div class="item-info">
-		    			<h4>Буковель на три дні</h4>
+		    			<a href="#"><h4>Буковель на три дні</h4></a>
 		    			<i class="fa fa-calendar" aria-hidden="true"></i>
 		    			<span class="date">23 - 26 грудня</span>
 		    			<div class="price">
@@ -335,9 +335,7 @@
 	</section>
 
 	<section class="s-slogan" style="background-image: url(img/slogan.jpg);">
-		<div class="slogan-outer">
-			<h3>Розумна фраза про подорожі</h3>
-			<div class="bottom-line"></div>
+		<div class="slogan">
 			<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Напоивший но страну переписали за имеет переулка рыбными, всеми, грамматики.</p>
 		</div>
 	</section>
@@ -349,7 +347,7 @@
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4">
+				<div class="col-lg-4">
 					<div class="blog-item">
 						<div class="blog-img">
 							<img src="img/main-3.jpg" alt="">
@@ -363,7 +361,7 @@
 						<button class="button">Читати далі</button>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-lg-4">
 					<div class="blog-item">
 						<div class="blog-img">
 							<img src="img/main-2.jpg" alt="">
@@ -377,7 +375,7 @@
 						<button class="button">Читати далі</button>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-lg-4">
 					<div class="blog-item">
 						<div class="blog-img">
 							<img src="img/main-4.jpg" alt="">
@@ -417,6 +415,73 @@
 				</div>
 			</div>
 	</section>
+
+	<footer class="my-footer">
+        <div class="main-footer">
+          <div class="container">
+            <div class="row">
+
+              <div class="col-lg-2 col-md-4 col-sm-6 col-xs-6">
+                <div class="footer-column">
+                  <img src="img/logo-3.png" class="logo-footer" alt="">
+                  <p>&copy Всі права захищено</p>
+                  <div class="social">
+										<i class="fa fa-facebook" aria-hidden="true"></i>
+										<i class="fa fa-instagram" aria-hidden="true"></i>
+										<i class="fa fa-envelope-o" aria-hidden="true"></i>
+									</div>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+                <div class="footer-column">
+                  <nav class="footer-menu">
+                    <ul>
+                      <li class="active"><a href="#">Наші тури</a></li>
+                      <li><a href="#">Море</a></li>
+                      <li><a href="#">Гори</a></li>
+                      <li><a href="#">Україна</a></li>
+                      <li><a href="#">Європа</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="footer-column">
+                  <div class="contacts">
+                  	<div class="contact-item contact-adress">
+											<i class="fa fa-map-marker" aria-hidden="true"></i>
+											<div class="bio">м.Вінниця, вул.Келецька 56</div>
+										</div>
+										<div class="contact-item contact-mail">
+											<i class="fa fa-envelope" aria-hidden="true"></i>
+											<div class="bio">exemple@gmail.com</div>
+										</div>
+										<div class="contact-item contact-tel">
+											<i class="fa fa-phone" aria-hidden="true"></i>
+											<div class="bio">+38 099 123 45 67</div>
+										</div>
+										<div class="contact-item contact-time">
+											<i class="fa fa-clock-o" aria-hidden="true"></i>
+											<div class="bio">Пн - Пт 8:00 - 18:00</div>
+										</div>
+									</div>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-12 col-sm-6 col-xs-12">
+                <div class="footer-column">
+                  <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2605.704493502412!2d28.423433815336367!3d49.22513108276829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472d5c650c8e9d8f%3A0xe0843997c3e00e80!2z0LLRg9C70LjRhtGPINCa0LXQu9C10YbRjNC60LAsIDU2LCDQktGW0L3QvdC40YbRjywg0JLRltC90L3QuNGG0YzQutCwINC-0LHQu9Cw0YHRgtGMLCAyMTAwMA!5e0!3m2!1suk!2sua!4v1542051974781" width="320" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      	
+      </footer>
 
 
 	<script src="js/scripts.min.js"></script>

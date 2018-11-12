@@ -6,10 +6,12 @@
 +media-breakpoint-down(xl)
 +media-breakpoint-down(lg)
 +media-breakpoint-down(md)
+	.blog-item
+		margin-bottom: 30px
 +media-breakpoint-down(sm)
 	.main-header
-		flex-direction: column
-		justify-content: center
+		flex-direction: row
+		justify-content: space-around
 		padding: 10px 0
 		.logo
 			order: 1
@@ -17,18 +19,17 @@
 				width: 120px
 		.contacts
 			order: 2
-			padding: 20px 0
+			padding: 20px 0 0 0
 			.contact-item
 				display: inline-block
 		.social
-			order: 3
+			display: none
 	.main-menu
 		display: flex
 		flex-direction: column
 		justify-content: center
 		align-items: center
 		z-index: 100
-		padding: 0
 		.menu
 			display: none
 			background-color: rgba(#000, .2)
@@ -39,22 +40,30 @@
 				display: block
 				text-align: center
 				margin: 0
+				padding: 5px 0
 				border: none
 				&:hover, &:focus, &:active
 					.menu-link
 						color: $accent
 		#nav-icon
 			display: block
-			margin-bottom: 20px
+			margin-bottom: 15px
 	.slider-item-block
-			display: none
+		display: none
+	.s-portfolio
+		padding-top: 0
 +media-breakpoint-down(xs)
 	.contacts
 		display: flex
 		flex-direction: column
 		font-size: 14px
-	.social
-		display: none
+	.section-title
+		padding-left: 15px
+		padding-right: 15px
+	.s-portfolio .portfolio-filter button
+		margin: 0 10px
+	.s-slogan
+		margin-bottom: 0
 
 /*==========  Mobile First  ==========*/
 

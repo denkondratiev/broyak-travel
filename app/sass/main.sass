@@ -81,24 +81,24 @@ h3
 			width: 150px
 			&:hover
 				cursor: pointer
-	.social
-		.fa
-			font-size: 24px
-			display: inline-block
-			width: 50px
-			height: 50px
-			line-height: 1.9
-			text-align: center
-			margin-right: 20px
-			color: $accent
-			border: 2px solid #fff
-			border-radius: 100%
-			transition: color .25s ease
-			&:last-child
-				margin: 0
-			&:hover, &:active, &:focus
-				border-color: $accent
-				cursor: pointer
+.social
+	.fa
+		font-size: 24px
+		display: inline-block
+		width: 50px
+		height: 50px
+		line-height: 1.9
+		text-align: center
+		margin-right: 20px
+		color: $accent
+		border: 2px solid #fff
+		border-radius: 100%
+		transition: color .25s ease
+		&:last-child
+			margin: 0
+		&:hover, &:active, &:focus
+			border-color: $accent
+			cursor: pointer
 .main-menu
 	background-color: transparent
 	width: 100%
@@ -292,11 +292,13 @@ h3
 		.item-info
 			padding: 25px 25px 15px 25px
 			background-color: #fff
-			h4
-				font-size: 18px
-				color: $accent
-				text-transform: uppercase
-			.fa
+			a
+				text-decoration: none
+				h4
+					font-size: 18px
+					color: $accent
+					text-transform: uppercase
+				.fa
 				font-size: 20px	
 			.date
 				margin-left: 10px
@@ -326,7 +328,6 @@ h3
 					background-color: $accent
 					color: #fff
 			.btn-go
-				float: right
 				&:hover, &:active
 					color: #ff003b
 					background-color: #fff
@@ -417,34 +418,37 @@ h3
 		right: 0
 		background-color: #000
 		opacity: .6
-	.slogan-outer
+	.slogan
 		position: relative
-		h3
-			font-size: 38px
-			font-weight: normal
-			font-family: "pasifico"
-			margin: 0
-			padding-bottom: 15px
+		padding: 30px
+		&:before
+			content: "\f10d"
+			position: absolute
+			top: 0
+			left: 20px
+			font-family: FontAwesome
+			font-size: 22px
+			color: $accent
+		&:after
+			content: "\f10e"
+			position: absolute
+			top: 0
+			right: 20px
+			font-family: FontAwesome
+			font-size: 22px
+			color: $accent
 		p
 			font-family: "caveat"
 			font-size: 26px
 			margin: 0
-			padding-top: 15px
-		.bottom-line
-			height: 2px
-			width: 20%
-			background-color: $accent
-			display: block
-			margin: 0 auto
+			padding: 15px
 
 .s-blog
-	margin: 50px
 	.blog-item
 		position: relative
 		background-color: $accent
 		padding: 30px
 		color: #fff
-		//top: -50px
 		box-shadow: 0 0 10px 0 rgba(0,0,0,0.65)
 		.blog-img
 			position: relative
@@ -506,4 +510,100 @@ h3
 			width: 100%
 			height: auto
 			max-width: 100%		
+
+.main-footer
+	background-color: #79c0f8
+	color: #fff
+	font-size: 14px
+	.footer-column
+		margin: 15px 0
+	.logo-footer
+		width: 150px
+		height: auto
+		+ p
+			padding: 0
+			font-size: 14px
+			line-height: 1.4		
+	.social
+		.fa
+			margin-right: 0
+.footer-menu
+	ul
+		padding: 0
+		margin: 0
+		list-style: none
+		li.active
+			a
+				color: $accent
+				&::before
+					color: $accent
+		a
+			color: #fff
+			transition: color .25s ease
+			display: inline-block
+			padding: 5px 0
+			text-decoration: underline
+			padding-left: 20px
+			position: relative
+			&:hover, &:focus
+				color: $accent
+				&::before
+					color: $accent
+			&::before
+				position: absolute
+				content: '\f1fc'
+				font-family: fontawesome
+				left: 0
+				font-size: 12px
+				text-decoration: none
+				transition: color .25s ease
+				top: 8px
+
+.footer-addr
+	position: relative
+	font-size: 16px
+	padding-left: 20px
+	.fa
+		position: absolute
+		left: 0
+		top: 7px
+		font-size: 18px
+	.footer-phone
+		font-size: 26px
+		display: block
+		.fa
+			top: 12px
+			font-size: 22px
+			left: 2px
+.footer-addr
+	p
+		position: relative
+		font-size: 15px
+.map
+	max-height: 250px
+	opacity: .8
+	transition: opacity .5s ease
+	&:hover
+		opacity: 1
+.top
+	position: fixed
+	bottom: 25px
+	right: -100px
+	background-color: #fff 
+	z-index: 12
+	border-radius: 50%
+	font-size: 26px
+	width: 40px
+	height: 40px
+	text-align: center
+	line-height: 40px
+	cursor: pointer
+	transition: all .5s ease
+	opacity: .6
+	&:hover
+		color: #fff
+		background-color: $accent
+		opacity: 1
+	&.active
+		right: 25px
 @import "media" // Always at the end
