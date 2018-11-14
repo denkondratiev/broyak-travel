@@ -16,6 +16,7 @@ var gulp          = require('gulp'),
 gulp.task('js', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
+		'app/libs/owl.carousel/dist/owl.carousel.min.js',
 		'app/libs/slick/slick.min.js',
 		'app/libs/mixitup/mixitup.min.js',
 		'app/libs/animateCSS/animate.js',
@@ -34,7 +35,7 @@ gulp.task('browser-sync', function() {
 		},
 		notify: false,
 		tunnel: true,
-		tunnel: "broyak-travel", //Demonstration page: http://projectname.localtunnel.me
+		tunnel: "broyak-travel", //Demonstration page: http://broyak-travel.localtunnel.me
 	})
 });
 
