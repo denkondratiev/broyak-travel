@@ -31,6 +31,10 @@ h1
 	font-size: 38px
 h3
 	font-size: 32px
+a 
+	outline: none
+	&:active, &:focus
+		text-decoration: none
 
 .no-pad
 	padding: 0
@@ -104,8 +108,6 @@ h3
 	width: 100%
 	display: flex
 	justify-content: center
-	padding-top: 20px
-	padding-bottom: 10px
 	z-index: 100
 	#nav-icon
 		display: none
@@ -208,6 +210,11 @@ h3
 					cursor: pointer
 					color: $accent
 					border-color: $accent
+					a
+						color: $accent
+				a
+					color: #fff
+					text-decoration: none
 
 .slick-prev
 	left: 15px
@@ -266,8 +273,6 @@ h3
 			padding: 0
 			margin: 0 15px
 			outline: none
-			&::last-child
-				margin: 0
 			background-color: transparent
 			border: none
 			font-size: 18px
@@ -277,6 +282,8 @@ h3
 			&:hover, &:active, &:focus
 				cursor: pointer
 				border-bottom: 2px solid $accent
+			&::last-child
+				margin: 0
 	.p-item
 		position: relative
 		margin: 15px 0
@@ -289,12 +296,10 @@ h3
 		.item-info
 			padding: 25px 25px 15px 25px
 			background-color: #fff
-			a
-				text-decoration: none
-				h4
-					font-size: 18px
-					color: $accent
-					text-transform: uppercase
+			h4
+				font-size: 18px
+				color: $accent
+				text-transform: uppercase
 				.fa
 				font-size: 20px	
 			.date
@@ -321,9 +326,13 @@ h3
 				outline: none
 				cursor: pointer
 				transition: all .25s ease
-				&:hover
+				a
+					color: $accent
+				&:hover, &:focus, &:active
 					background-color: $accent
 					color: #fff
+					a
+						color: #fff
 			.btn-go
 				&:hover, &:active
 					color: #ff003b
@@ -512,10 +521,11 @@ h3
 	display: flex
 	flex-direction: column
 	justify-content: center
-	//align-items: center
+	align-items: center
 .main-footer
 	background-color: #136aa5
 	color: #fff
+
 	.footer-column
 		margin: 15px 0
 	.logo-footer
@@ -528,43 +538,41 @@ h3
 	.social
 		.fa
 			margin-right: 0
-.footer-menu
-	padding-left: 30px
-	ul
-		padding: 0
-		margin: 0
-		list-style: none
-		li.active
+	.footer-menu
+		padding-left: 30px
+		ul
+			padding: 0
+			margin: 0
+			list-style: none
+			li.active
+				a
+					color: $accent
 			a
-				color: $accent
-		a
-			color: #fff
-			transition: color .25s ease
-			display: inline-block
-			padding: 5px 0
-			text-decoration: underline
+				color: #fff
+				transition: color .25s ease
+				display: inline-block
+				padding: 5px 0
+				text-decoration: underline
+				position: relative
+				&:hover, &:focus
+					color: $accent
+	.contacts-footer
+		font-size: 16px
+		.contact-item
 			position: relative
-			&:hover, &:focus
+			padding: 10px 0 10px 30px
+			.fa
+				position: absolute
+				left: 0
+				top: 13px
+				font-size: 18px
 				color: $accent
-.contacts
-	font-size: 16px
-	.contact-item
-		position: relative
-		padding: 10px 0 10px 20px
-		.fa
-			position: absolute
-			left: 0
-			top: 15px
-			font-size: 18px
-			color: $accent
-		.bio
-			margin-left: 10px
-.map
-	max-height: 250px
-	opacity: .8
-	transition: opacity .5s ease
-	&:hover
-		opacity: 1
+	.map
+		max-height: 250px
+		opacity: .8
+		transition: opacity .5s ease
+		&:hover
+			opacity: 1
 .top
 	position: fixed
 	bottom: 25px

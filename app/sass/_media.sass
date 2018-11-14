@@ -48,15 +48,35 @@
 		#nav-icon
 			display: block
 			margin-bottom: 15px
-	.slider-item-block
-		display: none
+	.s-main .slider-item
+		align-items: flex-end
+		.slider-item-block
+			padding: 0
+			text-align: center
+			background: none
+			top: -100px
+			p
+				display: none
 	.s-portfolio
 		padding-top: 0
+.main-footer .footer-menu
+	padding-left: 0
 +media-breakpoint-down(xs)
+	.slick-prev, .slick-next
+		background-color: transparent
+		border: none
+		border-radius: 0
+		opacity: 1
+		&:hover, &:focus
+			border-color: none
+			&::before
+				color: $accent
 	.contacts
 		display: flex
 		flex-direction: column
 		font-size: 14px
+	.main-header .contacts .contact-item.contact-time
+		display: none
 	.section-title
 		padding-left: 15px
 		padding-right: 15px

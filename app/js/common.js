@@ -4,8 +4,9 @@ $(function() {
 		loop:true,
 		items: 4,
 		nav:false,
+		dots:false,
 		autoplay:true,
-    autoplayTimeout:1000,
+    autoplayTimeout:1500,
     autoplayHoverPause:true,
     responsive:{
         0:{
@@ -14,6 +15,10 @@ $(function() {
         },
         580:{
             items:2,
+            nav:false
+        },
+        770:{
+            items:3,
             nav:false
         },
         992:{
@@ -26,7 +31,7 @@ $(function() {
 
 	$('#nav-icon').click(function() {
 		$(this).toggleClass('open');
-		$('.menu').slideToggle('slow');
+		$('.menu').slideToggle('fast');
 	});
 
 	$('.s-main').slick({
