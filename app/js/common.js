@@ -22,7 +22,7 @@ $(function() {
             nav:false
         },
         992:{
-            items:5,
+            items:4,
             nav:false
         }
     }
@@ -47,5 +47,16 @@ $(function() {
 	});
 
 	var mixer = mixitup('.portfolio-container');
+
+	$(window).scroll(function() {
+	if ($(this).scrollTop() > $(this).height()) {
+		$('.top').addClass('active');
+	} else {
+		$('.top').removeClass('active');
+	}
+	});
+	$('.top').click(function() {
+		$('html, body').stop().animate({scrollTop: 0}, 'slow', 'swing');
+	});
 	
 });
