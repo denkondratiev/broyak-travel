@@ -33,7 +33,7 @@ h3
 	font-size: 32px
 a 
 	outline: none
-	&:active, &:focus
+	&:hover, &:active, &:focus
 		text-decoration: none
 
 
@@ -41,6 +41,11 @@ a
 	position: absolute
 	z-index: 100
 	width: 100%
+.page-main-head
+	position: relative
+	//background-color: #136aa5
+	background-color: #000
+	padding-bottom: 15px
 .main-header
 	display: flex
 	align-items: center
@@ -498,12 +503,6 @@ a
 .s-gallery
 	position: relative
 	padding-top: 50px
-
-.flex-wrap
-	display: flex
-	flex-direction: column
-	justify-content: center
-	align-items: center
 	
 .my-footer
 	padding-top: 50px
@@ -579,6 +578,66 @@ a
 		opacity: 1
 	&.active
 		right: 25px
-	.fa 
+	.fa
+
+.container-form
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+
+//CALLBACK
+input, textarea
+	background-color: transparent
+	border: rgba(#000, .1) 2px solid
+	padding: 8px 20px
+	outline: none
+	display: inline-block
+
+.success
+	display: none
+	position: absolute
+	top: 0
+	right: 0
+	left: 0
+	bottom: 0
+	text-transform: uppercase
+	font-weight: bold
+	font-size: 24px
+	z-index: 10
+	span
+		margin: auto
+	& ~ *
+		transition: all .5 ease
+		&.active
+			& ~ *
+				opacity: .5
+				filter: blur(10px)
+
+.callback
+	position: relative
+	color: #000
+	.formhead
+		text-align: center
+		padding-top: 30px
+	input[type=date], input[type=number]
+		width: 49.5%
+	input[type=date]
+		float: right
+	input, textarea
+		color: #000
+		width: 100%
+		margin-top: 15px
+		&::-webkit-input-placeholder
+			color: #000
+			opacity: .4
+		&::-moz-placeholder
+			color: #000
+			opacity: .4
+		&::-ms-input-placeholder
+			color: #000
+			opacity: .4
+	.button
+		margin-top: 15px
 
 @import "media" // Always at the end
