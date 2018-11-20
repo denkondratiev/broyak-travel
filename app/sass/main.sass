@@ -36,7 +36,6 @@ a
 	&:hover, &:active, &:focus
 		text-decoration: none
 
-
 .main-head
 	position: absolute
 	z-index: 100
@@ -45,7 +44,7 @@ a
 	position: relative
 	z-index: 100
 	width: 100%
-	background-color: #136aa5
+	background-color: $dark
 	padding-bottom: 15px
 .main-header
 	display: flex
@@ -262,7 +261,6 @@ a
 		text-align: center
 		padding: 25px 0
 		h3
-			margin: 0
 			line-height: 1.2
 
 .s-portfolio
@@ -308,7 +306,7 @@ a
 				margin-left: 10px
 				font-weight: bold
 			.price
-				color: #ff003b
+				color: $red
 				font-size: 22px
 				font-weight: bold
 				margin-top: 5px
@@ -337,7 +335,7 @@ a
 						color: #fff
 			.btn-go
 				&:hover, &:active
-					color: #ff003b
+					color: $red
 					background-color: #fff
 					border-color: #ff003b
 		.p-item-img
@@ -508,7 +506,7 @@ a
 .my-footer
 	padding-top: 50px
 .main-footer
-	background-color: $blue
+	background-color: $dark
 	color: #fff
 	.footer-column
 		margin: 15px 0
@@ -563,7 +561,7 @@ a
 	right: -100px
 	background-color: $accent
 	color: #fff
-	z-index: 10
+	z-index: 100
 	border-radius: 50%
 	border: 1px solid $accent
 	font-size: 26px
@@ -580,12 +578,9 @@ a
 	&.active
 		right: 25px
 	.fa
+		vertical-align: baseline
 
-.container-form
-	display: flex
-	flex-direction: column
-	justify-content: center
-	align-items: center
+
 
 //CALLBACK
 input, textarea
@@ -606,14 +601,13 @@ input, textarea
 	font-weight: bold
 	font-size: 24px
 	z-index: 10
-	span
+	&.active
 		margin: auto
+		& ~ *
+			opacity: .5
+			filter: blur(10px)
 	& ~ *
 		transition: all .5 ease
-		&.active
-			& ~ *
-				opacity: .5
-				filter: blur(10px)
 
 .callback
 	position: relative
@@ -621,10 +615,8 @@ input, textarea
 	.formhead
 		text-align: center
 		padding-top: 30px
-	input[type=date], input[type=number]
+	input[type=number]
 		width: 49.5%
-	input[type=date]
-		float: right
 	input, textarea
 		color: #000
 		width: 100%
@@ -638,7 +630,179 @@ input, textarea
 		&::-ms-input-placeholder
 			color: #000
 			opacity: .4
-	.button
+	.button-call
 		margin-top: 15px
+		text-transform: uppercase
+		padding: 8px 14px
+		font-size: 16px
+		color: #fff
+		outline: none
+		border: 2px solid $accent
+		background-color: $accent
+		transition: all .25s ease
+		&:hover
+			cursor: pointer
+			background-color: lighten($accent, 10%)
+			border-color: lighten($accent, 10%)
+		&:active, &:focus
+			background-color: transparent
+			color: $accent
+
+.single-tour
+	.content-title
+		text-align: center
+		padding: 25px 0 15px 0
+		h3
+			display: flex
+			align-items: center
+			white-space: nowrap
+			font-size: 22px
+			margin: 0
+			span
+				margin: 0 10px
+			&::before, &::after
+				content: ''
+				height: 1px
+				width: 100%
+				position: relative
+				background-color: $accent
+				color: $accent
+				display: inline-block
+	.tour-info
+		border-top: 2px solid $accent
+		border-bottom: 2px solid $accent
+		display: flex
+		justify-content: space-around
+		align-items: center
+		padding: 15px 0
+		.info-date
+			font-weight: bold
+			font-size: 24px
+		.info-price
+			font-weight: bold
+			font-size: 24px
+			.sale
+				color: $red
+			.full
+				//color: #000
+				text-decoration: line-through
+				font-size: 16px
+		.info-button
+			text-transform: uppercase
+			padding: 8px 14px
+			font-size: 16px
+			color: #fff
+			outline: none
+			border: 2px solid $accent
+			background-color: $accent
+			transition: all .25s ease
+			&:hover
+				cursor: pointer
+				background-color: lighten($accent, 10%)
+				border-color: lighten($accent, 10%)
+			&:active, &:focus
+				background-color: transparent
+				color: $accent
+	.tour-img
+		padding: 15px 0
+		img
+			display: block
+			width: 100%
+			max-width: 100%
+			height: auto
+	.tour-content
+		img
+			width: 49%
+		table
+			img
+				width: 100%
+	.tour-program 
+		.transition
+			transition: all 0.25s ease-in-out
+		.no-select
+			user-select: none
+		h4
+			display: block
+			cursor: pointer
+			margin: 0
+			@extend .no-select
+		p
+			position: relative
+			overflow: hidden
+			@extend .transition
+			opacity: 1
+			transform: translate( 0 , 0 )  
+			z-index: 2
+			margin: 0
+		ul
+			list-style: none
+			padding: 0
+			margin: 0
+		li
+			position: relative
+			padding: 0
+			margin: 5px 0
+			padding: 15px
+			background-color: transparent
+			border: 1px solid $accent
+			&:nth-of-type(1)
+				animation-delay: 0.5s
+			&:nth-of-type(2)
+				animation-delay: 0.75s			  
+			&:nth-of-type(3)
+				animation-delay: 1.0s
+			i
+				position: absolute
+				transform: translate(-25px,0)
+				margin-top: 5px
+				right: 0
+				&::before , &::after
+					content: ""
+					@extend .transition
+					position: absolute
+					background-color: $accent
+					width: 6px
+					height: 18px
+				&::before
+					transform: translate(-4px,0) rotate(45deg)
+				&::after
+					transform: translate(4px,0) rotate(-45deg)
+
+			input[type=checkbox]
+				position: absolute
+				cursor: pointer
+				width: 100%
+				height: 100%
+				z-index: 1
+				opacity: 0
+				&:checked
+					&~p
+						max-height: 0
+						opacity: 0
+						transform: translate(0,50%)	        
+					&~i
+						&::before
+							transform: translate(2px,0) rotate(45deg)
+						&::after
+							transform: translate( 2px,0) rotate(-45deg)
+	.tour-service
+		.service-list
+			margin: 0
+			.service-item
+				padding: 5px 0
+	.tour-hotel
+		img
+			width: 49%
+	.atention
+		h3
+			text-transform: uppercase
+			&::before, &::after
+				background-color: lighten($red, 10%)
+		p
+			background-color: lighten($red, 10%)
+			color: #fff
+			margin: 0
+			padding: 15px		
+
 
 @import "media" // Always at the end
