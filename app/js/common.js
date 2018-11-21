@@ -69,7 +69,7 @@ $(function() {
 
 
 	$(window).scroll(function() {
-	if ($(this).scrollTop() > $(this).height()) {
+	if ($(window).scrollTop() > $(window).height()) {
 		$('.top').addClass('active');
 	} else {
 		$('.top').removeClass('active');

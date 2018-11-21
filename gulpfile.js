@@ -19,7 +19,6 @@ gulp.task('js', function() {
 		'app/libs/owl.carousel/dist/owl.carousel.min.js',
 		'app/libs/slick/slick.min.js',
 		'app/libs/mixitup/mixitup.min.js',
-		'app/libs/animateCSS/animate.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))

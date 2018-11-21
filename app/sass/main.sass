@@ -454,6 +454,7 @@ a
 		position: relative
 		background-color: $accent
 		padding: 30px
+		margin: 15px 0
 		color: #fff
 		box-shadow: 0 0 10px 0 rgba(0,0,0,0.65)
 		.blog-img
@@ -486,6 +487,7 @@ a
 			h2
 				margin: 0
 		.button
+			text-align: center
 			margin: 0 auto
 			display: block
 			padding: 4px 12px
@@ -648,26 +650,27 @@ input, textarea
 			background-color: transparent
 			color: $accent
 
+
+.content-title
+	text-align: center
+	padding: 25px 0 15px 0
+	h3
+		display: flex
+		align-items: center
+		white-space: nowrap
+		font-size: 22px
+		margin: 0
+		span
+			margin: 0 10px
+		&::before, &::after
+			content: ''
+			height: 1px
+			width: 100%
+			position: relative
+			background-color: $accent
+			color: $accent
+			display: inline-block
 .single-tour
-	.content-title
-		text-align: center
-		padding: 25px 0 15px 0
-		h3
-			display: flex
-			align-items: center
-			white-space: nowrap
-			font-size: 22px
-			margin: 0
-			span
-				margin: 0 10px
-			&::before, &::after
-				content: ''
-				height: 1px
-				width: 100%
-				position: relative
-				background-color: $accent
-				color: $accent
-				display: inline-block
 	.tour-info
 		border-top: 2px solid $accent
 		border-bottom: 2px solid $accent
@@ -803,6 +806,26 @@ input, textarea
 			color: #fff
 			margin: 0
 			padding: 15px		
+
+
+.s-single-blog
+	.single-blog-content
+		img
+			display: block
+			margin: 0 auto
+			float: left
+			max-width: 100%
+			height: auto
+			padding-right: 20px
+			padding-bottom: 10px
+		.content-title
+			h3
+				font-size: 26px
+		.single-blog-img
+			img
+				width: 100%
+				max-width: 100%
+				height: auto
 
 
 @import "media" // Always at the end
