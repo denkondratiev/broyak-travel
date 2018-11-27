@@ -12,7 +12,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <!-- Template Basic Images Start -->
-  <meta property="og:image" content="path/to/image.jpg">
   <link rel="icon" href="img/favicon/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
   <!-- Template Basic Images End -->
@@ -27,6 +26,12 @@
 </head>
 
 <body>
+
+  <div class="preloader">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
   <!-- Custom HTML -->
 <header class="page-main-head">
@@ -76,11 +81,11 @@
     <div class="row">
       <div class="col-12">
 
-          <form class="callback">
+          <form action="mail.php" class="callback">
             <div class="success"><span>Дякуємо за заявку!!!</span></div>
             <!-- Hidden Required Fields -->
             <input type="hidden" name="project_name" value="Broyak-travel">
-            <input type="hidden" name="admin_email" value="broyak-travel@gmail.com">
+            <input type="hidden" name="admin_email" value="denys.kondratiev.job@gmail.com">
             <input type="hidden" name="form_subject" value="Замовлення з сайту">
             <!-- END Hidden Required Fields -->
             <div class="formhead"><h3>Замовити тур</h3></div>
@@ -90,7 +95,7 @@
             <input type="tel" name="Телефон" class="phone-number" placeholder="Ваш номер телефону..." required>
             <input type="number" name="Кількість людей" placeholder="Кількість людей...">
             <textarea type="text" name="Побажання" placeholder="Ваші побажання..."></textarea>
-            <button class="button-call">Відправити</button>
+            <button  class="button-call">Відправити</button>
           </form>
 
       </div>

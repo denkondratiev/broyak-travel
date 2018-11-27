@@ -12,20 +12,25 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	
 	<!-- Template Basic Images Start -->
-	<meta property="og:image" content="path/to/image.jpg">
 	<link rel="icon" href="img/favicon/favicon.ico">
 	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
 	<!-- Template Basic Images End -->
-	
+
 	<!-- Custom Browsers Color Start -->
-	<meta name="theme-color" content="#000">
-	<!-- Custom Browsers Color End -->
+  <meta name="theme-color" content="#000">
+  <!-- Custom Browsers Color End -->
 
 	<link rel="stylesheet" href="css/main.min.css">
 
 </head>
 
 <body>
+
+	<div class="preloader">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
 
 	<!-- Custom HTML -->
 <header class="main-head">
@@ -125,21 +130,15 @@
 	</div>
 </section>
 
-	<section id="tours" class="s-portfolio">
+	<section class="s-portfolio">
 		<div class="section-title">
-			<h3>Наші тури</h3>
-			<span>Оберіть свій найкращій відпочинок разом з нами )</span>
+			<h3>Наші найближчі подорожі</h3>
+			<span>Оберіть свій відпочинок разом з нами</span>
 		</div>
-		<div class="portfolio-filter col-12">
-			<button type="button" data-filter="all" class="active">Всі тури</button>
-			<button type="button" data-filter=".category-sea">Моря</button>
-			<button type="button" data-filter=".category-mount">Гори</button>
-			<button type="button" data-filter=".category-ukr">Україна</button>
-			<button type="button" data-filter=".category-eu">Європа</button>
-		</div>
-		<div class="portfolio-container container">
+		<div class="container">
 	    <div class="row">
-	    	<div class="mix col-lg-4 col-sm-6 category-sea" data-order="1">
+
+	    	<div class="mix col-lg-4 col-sm-6">
 	    		<div class="p-item">
 						<div class="p-item-img">
 							<div class="overlay-wrap">
@@ -169,6 +168,7 @@
 		    		</div>
 		    	</div>
 	    	</div>
+
 		    <div class="mix col-lg-4 col-sm-6 category-mount" data-order="2">
 		    	<div class="p-item">
 						<div class="p-item-img">
