@@ -1,5 +1,9 @@
 $(function() {
 
+	$(window).on('load', function() {
+		$('.preloader').delay(1000).fadeOut('slow');
+	});
+
 	$(".owl-carousel").owlCarousel({
 		loop:true,
 		items: 4,
@@ -45,8 +49,6 @@ $(function() {
 	  fade: true,
 	  cssEase: 'linear',
 	});
-
-	var mixer = mixitup('.portfolio-container');
 
 
 	//E-mail Ajax Send

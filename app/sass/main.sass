@@ -36,6 +36,42 @@ a
 	&:hover, &:active, &:focus
 		text-decoration: none
 
+.preloader
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	z-index: 1000
+	background-color: #000
+	display: flex
+	justify-content: center
+	align-items: center
+	span 
+		margin: 5px
+		background: $accent
+		border-radius: 50px
+		animation: loader 0.9s infinite alternate
+		animation: loader 0.9s infinite alternate
+		&:nth-of-type(2) 
+			animation-delay: 0.3s
+			animation-delay: 0.3s
+		&:nth-of-type(3) 
+			animation-delay: 0.6s
+			animation-delay: 0.6s
+
+@keyframes loader
+	0%
+		width: 10px
+		height: 10px
+		opacity: 0.9
+		transform: translateY(0)
+	100%
+		width: 24px
+		height: 24px
+		opacity: 0.1
+		transform: translateY(-21px)
+
 .main-head
 	position: absolute
 	z-index: 100
@@ -166,7 +202,6 @@ a
 				color: #fff
 				text-transform: uppercase
 				text-decoration: none
-		
 
 .s-main
 	position: relative
@@ -269,8 +304,12 @@ a
 	position: relative
 	.portfolio-filter
 		text-align: center
-		button
-			padding: 0
+		margin: 0
+		padding: 0
+		list-style-type: none
+		.button-filter
+			display: inline-block
+			position: relative
 			margin: 0 15px
 			outline: none
 			background-color: transparent
@@ -278,12 +317,18 @@ a
 			font-size: 18px
 			transition: all .25s ease
 			text-transform: uppercase
-			border-bottom: 2px solid transparent
+			&:last-child
+				margin-right: 0
+				&::after
+					display: none
+			&::after
+				content: '/'
+				position: absolute
+				right: -20px
+				color: $accent
 			&:hover, &:active, &:focus
 				cursor: pointer
-				border-bottom: 2px solid $accent
-			&::last-child
-				margin: 0
+				color: $accent
 	.p-item
 		position: relative
 		margin: 15px 0
@@ -368,8 +413,8 @@ a
 							color: inherit
 						.overlay-icon
 							border: 1px solid #fff
-							padding:  3px 10px
-							font-size: 18px
+							padding:  3px 16px
+							font-size: 28px
 							transform: translateY(-50px)
 							transition: transform .35s ease
 							display: inline-block
@@ -604,7 +649,9 @@ input, textarea
 	font-size: 24px
 	z-index: 10
 	&.active
-		margin: auto
+		align-items: center
+		justify-content: center
+		flex-direction: column
 		& ~ *
 			opacity: .5
 			filter: blur(10px)
@@ -617,8 +664,6 @@ input, textarea
 	.formhead
 		text-align: center
 		padding-top: 30px
-	input[type=number]
-		width: 49.5%
 	input, textarea
 		color: #000
 		width: 100%
@@ -633,6 +678,7 @@ input, textarea
 			color: #000
 			opacity: .4
 	.button-call
+		display: block
 		margin-top: 15px
 		text-transform: uppercase
 		padding: 8px 14px

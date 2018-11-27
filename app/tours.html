@@ -12,7 +12,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <!-- Template Basic Images Start -->
-  <meta property="og:image" content="path/to/image.jpg">
   <link rel="icon" href="img/favicon/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
   <!-- Template Basic Images End -->
@@ -27,6 +26,12 @@
 </head>
 
 <body>
+
+  <div class="preloader">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
   <!-- Custom HTML -->
 <header class="page-main-head">
@@ -72,11 +77,19 @@
 </header>
 
 
-<section id="tours" class="s-portfolio">
+<section  class="s-portfolio">
   <div class="section-title">
     <h3>Наші тури</h3>
-    <span>Оберіть свій найкращій відпочинок разом з нами )</span>
+    <span>Оберіть свій відпочинок разом з нами</span>
   </div>
+  <ul class="portfolio-filter col-12">
+      <li class="button-filter">Всі тури</li>
+      <li class="button-filter">Море</li>
+      <li class="button-filter">Гори</li>
+      <li class="button-filter">Україна</li>
+      <li class="button-filter">Закордон</li>
+      <li class="button-filter">Екскурсійні</li>
+    </ul>
   <div class="container">
     <div class="row">
       
