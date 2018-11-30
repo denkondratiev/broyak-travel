@@ -50,6 +50,7 @@ $(function() {
 	  cssEase: 'linear',
 	});
 
+	var mixer = mixitup('.portfolio-mix');
 
 	//E-mail Ajax Send
 	$(".callback").submit(function() { //Change class
