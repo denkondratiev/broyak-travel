@@ -17,7 +17,7 @@
     
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> style="background-color: <?php the_field('site_main_color', 'option'); ?>" >
 
     <div class="preloader">
         <span></span>
@@ -31,26 +31,26 @@
       <div class="contact-item contact-tel">
        <!-- <i class="fa fa-phone" aria-hidden="true"></i>-->
         <i class="icon-phone-life"></i>
-        <div class="bio"><?php echo get_field('phone_life'); ?></div>
+        <div class="bio"><?php the_field('phone_life', 'option'); ?></div>
       </div>
       <div class="contact-item contact-tel">
         <!--<i class="fa fa-phone" aria-hidden="true"></i>-->
         <i class="icon-phone-kvs"></i>
-        <div class="bio"><?php echo get_field('phone_kyivstar'); ?></div>
+        <div class="bio"><?php the_field('phone_kyivstar', 'option'); ?></div>
       </div>
       <div class="contact-item contact-tel">
        <!-- <i class="fa fa-phone" aria-hidden="true"></i>-->
        <i class="icon-phone-mts"></i>
-        <div class="bio"><?php echo get_field('phone_mtc'); ?></div>
+        <div class="bio"><?php the_field('phone_mtc', 'option'); ?></div>
       </div>
     </div>
     <div class="logo">
-      <a href="<?php echo home_url( '/' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt=""></a>
+      <a href="<?php echo home_url( '/' ); ?>"><img src="<?php the_field('site_logo', 'option'); ?>"></a>
     </div>
     <div class="social">
-      <a href="<?php echo get_field('facebook_link'); ?>" target="blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-      <a href="https://www.instagram.com/" target="blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-      <a href="<?php echo get_field('email_link'); ?>"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+      <a href="<?php the_field('facebook_link', 'option'); ?>" target="blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+      <a href="<?php the_field('instagram_link', 'option'); ?>" target="blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+      <a href="<?php the_field('email_link', 'option'); ?>"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
     </div>
   </div>
   
@@ -75,7 +75,7 @@
       ?>
     </ul>
   </div>
-</header>
+</header><!-- End header-->
   
 
 

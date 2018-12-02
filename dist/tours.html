@@ -91,7 +91,9 @@
       <li class="button-filter" data-filter=".ekskursii">Екскурсійні</li>
     </ul>
   <div class="container">
-    <div class="row portfolio-mix">
+    <div class="row portfolio-mix"><!-- <?php
+      $terms = get_the_terms($post->ID, 'tour_category');
+      ?>-->
       
       <div class="mix more zakordon col-lg-4 col-sm-6">
           <div class="p-item">
@@ -106,7 +108,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+              </div>
               <img src="img/main-4.jpg" alt="">
             </div>
             <div class="item-info">
