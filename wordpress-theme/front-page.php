@@ -3,7 +3,8 @@
  * Template Name: Шаблон - Головна
  */
 
-get_header();?>
+get_header();
+?>
 
 <section class="s-main slider">
   <?php                 
@@ -27,7 +28,7 @@ get_header();?>
         <div class="col-8 offset-2 col-md-5 offset-md-7">
           <div class="slider-item-block">
             <p><?php echo kama_excerpt( array('maxchar'=>70, $content) ); ?></p>
-            <p class="color-p"><?php $slider_text ?></p>
+            <p class="color-p"><?php echo $slider_text ?></p>
             <a href="<?php the_permalink(); ?>" class="button">Детальніше</a>
           </div>
         </div>
@@ -83,7 +84,7 @@ get_header();?>
                 </div>
               </div>
             </div>
-             <img src="<?php echo $tour_img_card['sizes']['large'] ?>" alt="">
+             <img src="<?php echo $tour_img_card['sizes']['large'] ?>" alt="<?php echo the_title_attribute(); ?>">
             </div>
             <div class="item-info">
               <a href="<?php the_permalink(); ?>"><h4><?php the_title(); ?></h4></a>
@@ -118,6 +119,7 @@ get_header();?>
     </div>
   </section><!--End slogan-->
 
+
   <section id="gallery" class="s-gallery">
     <div class="section-title">
       <h3><?php  the_field('gallery_title', 'option') ?></h3>
@@ -132,7 +134,7 @@ get_header();?>
 
           <div class="owl-carousel">
             <?php foreach( $images as $image ): ?>
-              <img src="<?php echo $image['sizes']['large'] ?>" style="width: 100%; height: 220px;" alt="">
+              <img src="<?php echo $image['sizes']['large'] ?>" style="width: 100%; height: 220px;" alt="<?php echo the_title_attribute(); ?>">
             <?php endforeach; ?>
           </div>
 
@@ -166,7 +168,7 @@ get_header();?>
         <div class="col-lg-4 col-sm-6">
           <div class="blog-item">
             <div class="blog-img">
-              <a href="<?php the_permalink(); ?>"><img src="<?php echo $blog_img_card['sizes']['medium'] ?>" alt=""></a>
+              <a href="<?php the_permalink(); ?>"><img src="<?php echo $blog_img_card['sizes']['medium'] ?>" alt="<?php echo the_title_attribute(); ?>"></a>
             </div>
             <div class="blog-title">
               <a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
@@ -186,9 +188,5 @@ get_header();?>
       </div>
     </div>
   </section>
-
-
-	
-
 
 <?php get_footer(); ?>

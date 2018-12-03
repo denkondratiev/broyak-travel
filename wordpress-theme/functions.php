@@ -1,5 +1,19 @@
 <?php 
 
+	function deregister_cf7_scripts() {
+		if ( !is_page(178) ) {
+		wp_deregister_script('contact-form-7');
+		}
+	}
+add_action('wp_print_scripts', 'deregister_cf7_scripts', 100);
+ 
+	function deregister_cf7_styles() {
+		if ( !is_page(178) ) {
+		wp_deregister_style('contact-form-7');
+		}
+	}
+add_action('wp_print_styles', 'deregister_cf7_styles', 100);
+	
 	function true_style_frontend() {
  		wp_enqueue_style( 'true_style', get_stylesheet_directory_uri() . '/main.min.css' );
 	}

@@ -61,5 +61,6 @@
 			
 			<div class="top" title="Догори"><i class="fa <?php the_field('up_button', 'option'); ?>"></i></div>
 
+<?php wp_footer();  ?>
 </body>
 </html>

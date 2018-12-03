@@ -50,7 +50,7 @@
     <div class="social">
       <a href="<?php the_field('facebook_link', 'option'); ?>" target="blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
       <a href="<?php the_field('instagram_link', 'option'); ?>" target="blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-      <a href="<?php the_field('email_link', 'option'); ?>"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+      <a href="mailto:<?php the_field('email_link', 'option'); ?>"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
     </div>
   </div>
   
