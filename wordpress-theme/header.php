@@ -73,6 +73,8 @@
         );
         echo str_replace('<a', '<a class="menu-link"', wp_nav_menu($menuParameters) );     
       ?>
+      <li class="menu-item"><a class="menu-link" href="<?php echo get_home_url(); ?>/#gallery">Галерея</a></li>
+      <li class="menu-item"><a class="menu-link" href="<?php echo get_home_url(); ?>/#contacts">Контакти</a></li>
     </ul>
   </div>
 </header><!-- End header-->

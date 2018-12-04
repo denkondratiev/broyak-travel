@@ -6,6 +6,12 @@
 get_header();
 ?>
 
+<script type="text/javascript">
+$( document ).ready(function() {
+console.log( "ready!" );
+});
+</script>
+
 <section class="s-main slider">
   <?php                 
     $args = array(
@@ -27,7 +33,7 @@ get_header();
       <div class="row">
         <div class="col-8 offset-2 col-md-5 offset-md-7">
           <div class="slider-item-block">
-            <p><?php echo kama_excerpt( array('maxchar'=>70, $content) ); ?></p>
+            <p><?php echo kama_excerpt( array('maxchar'=>65, $content) ); ?></p>
             <p class="color-p"><?php echo $slider_text ?></p>
             <a href="<?php the_permalink(); ?>" class="button">Детальніше</a>
           </div>
@@ -70,7 +76,7 @@ get_header();
                 $tour_img_card = get_field('tour_img_card');
                 $content = get_the_content(); 
         ?>
-        <div class="p-item-wrap col-lg-4 col-sm-6">
+        <div class="p-item-wrap col-lg-4 col-md-6">
           <div class="p-item">
             <div class="p-item-img">
               <div class="overlay-wrap">
@@ -95,7 +101,9 @@ get_header();
                 <span class="sale"><?php echo $tour_price_sale; ?></span>
                 <span class="full"><?php echo $tour_price_old ?></span>
               </div>
-              <p><?php echo kama_excerpt( array('maxchar'=>70, $content) ); ?></p>
+              <div class="p-text">
+                <?php echo kama_excerpt( array('maxchar'=>70, $content) ); ?>
+              </div>
               <a href="<?php the_permalink(); ?>" class="button">Детальніше</a>
               <a href="<?php echo get_permalink(178); ?>" class="button btn-go">Поїхати з нами</a>
             </div>
@@ -165,10 +173,10 @@ get_header();
                 $content = get_the_content();
                 $blog_img_card = get_field('blog_img_card');
         ?>
-        <div class="col-lg-4 col-sm-6">
+        <div class="blog-wrap col-lg-4 col-md-6">
           <div class="blog-item">
             <div class="blog-img">
-              <a href="<?php the_permalink(); ?>"><img src="<?php echo $blog_img_card['sizes']['medium'] ?>" alt="<?php echo the_title_attribute(); ?>"></a>
+              <a href="<?php the_permalink(); ?>"></a><img src="<?php echo $blog_img_card['sizes']['medium'] ?>" alt="<?php echo the_title_attribute(); ?>">
             </div>
             <div class="blog-title">
               <a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>

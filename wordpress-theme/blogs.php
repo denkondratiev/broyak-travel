@@ -26,10 +26,10 @@ get_header();
                 $content = get_the_content();
                 $blog_img_card = get_field('blog_img_card');
         ?>
-        <div class="col-lg-4 col-sm-6">
+        <div class="blog-wrap col-lg-4 col-md-6">
           <div class="blog-item">
             <div class="blog-img">
-              <a href="<?php the_permalink(); ?>"><img src="<?php echo $blog_img_card['sizes']['medium'] ?>" alt=""></a>
+              <a href="<?php the_permalink(); ?>"></a><img src="<?php echo $blog_img_card['sizes']['medium'] ?>" alt="">
             </div>
             <div class="blog-title">
               <a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
@@ -40,7 +40,7 @@ get_header();
             <a href="<?php the_permalink(); ?>" class="button">Читати далі</a>
           </div>
         </div>
-        <?php                    
+        <?php                
           }
         }
           // Reset the `$post` data to the current post in main query.

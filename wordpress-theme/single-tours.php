@@ -82,29 +82,7 @@ get_header();
         <div class="content-title">
           <h3><span>Де ми будемо жити</span></h3>
         </div>
-
-         <?php if( have_rows('our_hotel') ):
-        	while( have_rows('our_hotel') ): the_row(); 
-						$hotel_info = get_sub_field('hotel_info');
-						$hotel_img_1 = get_sub_field('hotel_img_1');
-						$hotel_img_2 = get_sub_field('hotel_img_2');
-					?>
-
-	          <?php if( $hotel_info ):
-	          	echo $hotel_info; 
-						endif; ?>
-					<div class="img-block">
-						<?php if( $hotel_img_1 ):?>
-	          	<img src="<?php echo $hotel_img_1['sizes']['large']; ?>" alt="<?php echo the_title_attribute(); ?>">	 
-						<?php endif; ?>
-						<?php if( $hotel_img_2 ):?>
-	          	<img src="<?php echo $hotel_img_2['sizes']['large']; ?>" alt="<?php echo the_title_attribute(); ?>">
-						<?php	endif; ?>
-					</div>
-
-	        <?php endwhile; ?>
-	      <?php endif;?>
- 
+        <?php echo the_field('our_hotel'); ?>
       </div>
       <div class="atention">
         <div class="content-title">

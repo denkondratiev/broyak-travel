@@ -59,7 +59,7 @@ get_header();
         endif;
           ?>
 
-        <div class="mix p-item-wrap col-lg-4 col-sm-6 <?php echo $tour_class_array ?>">
+        <div class="mix p-item-wrap col-lg-4 col-md-6 <?php echo $tour_class_array ?>">
           <div class="p-item">
             <div class="p-item-img">
               <div class="overlay-wrap">
@@ -84,7 +84,9 @@ get_header();
                 <span class="sale"><?php echo $tour_price_sale; ?></span>
                 <span class="full"><?php echo $tour_price_old ?></span>
               </div>
-              <p><?php echo kama_excerpt( array('maxchar'=>70, $content) ); ?></p>
+              <div class="p-text">
+                <?php echo kama_excerpt( array('maxchar'=>70, $content) ); ?>
+              </div>
               <a href="<?php the_permalink(); ?>" class="button">Детальніше</a>
               <a href="<?php echo get_permalink(178); ?>" class="button btn-go">Поїхати з нами</a>
             </div>

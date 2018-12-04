@@ -1,4 +1,18 @@
 <?php 
+	
+	 add_theme_support( 'post-thumbnails' );
+	 add_image_size( 'my_post_img', 1920, 9999 );
+	 add_filter( 'image_size_names_choose', 'my_custom_sizes' );
+		function my_custom_sizes( $sizes ) {
+			return array_merge( $sizes, array(
+				'my_post_img' => 'Мой размерчик',
+			) );
+		}
+
+	remove_action('wp_head', 'wp_generator');
+	remove_action('wp_head', 'wlwmanifest_link');
+	remove_action('wp_head', 'print_emoji_detection_script', 7);
+	remove_action('wp_print_styles', 'print_emoji_styles');
 
 	function deregister_cf7_scripts() {
 		if ( !is_page(178) ) {
@@ -77,7 +91,7 @@ function kama_excerpt( $args = '' ){
 							  // Если в тексте есть `<!--more-->`, то `maxchar` игнорируется и берется все до <!--more--> вместе с HTML.
 		'autop'     => true,  // Заменить переносы строк на <p> и <br> или нет?
 		'save_tags' => '',    // Теги, которые нужно оставить в тексте, например '<strong><b><a>'.
-		'more_text' => 'Читать дальше...', // Текст ссылки `Читать дальше`.
+		'more_text' => 'Читати далі...', // Текст ссылки `Читать дальше`.
 	), $args );
 
 	$rg = apply_filters( 'kama_excerpt_args', $rg );
