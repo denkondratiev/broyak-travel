@@ -44,27 +44,27 @@ get_header();
       </div>
       <div class="tour-content">
         <div class="content-title">
-          <h3><span>Про подорож</span></h3>
+          <h3><span><?php echo the_field('title_about_tour'); ?></span></h3>
         </div>
 				<?php the_content(); ?>
 			</div>
 			<div class="tour-program">
         <div class="content-title">
-          <h3><span>Програма подорожі</span></h3>
+          <h3><span><?php echo the_field('title_tour_program'); ?></span></h3>
         </div>
 
        <?php if( have_rows('tour_program') ): ?>
         <ul>
         	<?php while( have_rows('tour_program') ): the_row(); 
-						$day = get_sub_field('tour_day');
-						$day_number = get_sub_field('day_number');
+						$tour_day = get_sub_field('tour_day');
+            $tour_day_button = get_sub_field('tour_day_button');
 					?>
           <li>
-            <?php if( $day ): ?>
+            <?php if( $tour_day ): ?>
             	<input type="checkbox" checked>
             	<i></i>
-            	<h4>Подивитись <span><?php echo $day_number ?></span> день</h4>
-							<p><?php echo $day; ?></p>
+            	<h4><?php echo $tour_day_button; ?></h4>
+							<p><?php echo $tour_day; ?></p>
 						<?php endif; ?>
           </li>
           <?php endwhile; ?>
@@ -74,19 +74,19 @@ get_header();
       </div>
       <div class="tour-service">
         <div class="content-title">
-          <h3><span>Що входить у подорож</span></h3>
+          <h3><span><?php echo the_field('title_tour_service') ?></span></h3>
         </div>
         <?php echo the_field('tour_service'); ?>
       </div>
       <div class="tour-hotel">
         <div class="content-title">
-          <h3><span>Де ми будемо жити</span></h3>
+          <h3><span><?php echo the_field('title_our_hotel') ?></span></h3>
         </div>
         <?php echo the_field('our_hotel'); ?>
       </div>
       <div class="atention">
         <div class="content-title">
-          <h3><span>Зверніть увагу</span></h3>
+          <h3><span><?php echo the_field('title_atention') ?></span></h3>
         </div>
         <?php echo the_field('atention'); ?>
       </div>

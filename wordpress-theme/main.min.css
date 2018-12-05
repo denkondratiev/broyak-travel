@@ -268,14 +268,14 @@
     font-weight: 400;
     font-style: normal;
     src: url(fonts/Caveat/Caveat-Regular.eot);
-    src: url(fonts/Caveat/Caveat-Regular.eot?#iefix) format("embedded-opentype"), url(fonts/Caveat/Caveat-Regular.woff) format("woff"), url(fonts/Caveat/Caveat-Regular.ttf) format("truetype");
+    src: url(fonts/Caveat/Caveat-Regular.eot?#iefix) format("embedded-opentype"), url(fonts/Caveat/Caveat-Regular.ttf) format("truetype");
 }
 @font-face {
     font-family: pasifico;
     font-weight: 400;
     font-style: normal;
     src: url(fonts/Pasifico/Pacifico-Regular.eot);
-    src: url(fonts/Pasifico/Pacifico-Regular.eot?#iefix) format("embedded-opentype"), url(fonts/Pasifico/Pacifico-Regular.woff) format("woff"), url(fonts/Pasifico/Pacifico-Regular.ttf) format("truetype");
+    src: url(fonts/Pasifico/Pacifico-Regular.eot?#iefix) format("embedded-opentype"), url(fonts/Pasifico/Pacifico-Regular.ttf) format("truetype");
 }
 *, ::after, ::before {
     -webkit-box-sizing: border-box;
@@ -4183,13 +4183,13 @@ html {
 .slick-loading .slick-list {
     background: #fff url(ajax-loader.gif) center center no-repeat;
 }
-@font-face {
+/*@font-face {
     font-family: slick;
     src: url(fonts/slick.eot);
     src: url(fonts/slick.eot?#iefix) format("embedded-opentype"), url(fonts/slick.woff) format("woff"), url(fonts/slick.ttf) format("truetype"), url(fonts/slick.svg#slick) format("svg");
     font-weight: 400;
     font-style: normal;
-}
+}*/
 .slick-next, .slick-prev {
     position: absolute;
     display: block;
@@ -4220,7 +4220,7 @@ html {
     opacity: .25;
 }
 .slick-next:before, .slick-prev:before {
-    font-family: slick;
+   /* font-family: slick;*/
     font-size: 20px;
     line-height: 1;
     color: #fff;
@@ -4297,7 +4297,7 @@ html {
     content: "•";
     width: 20px;
     height: 20px;
-    font-family: slick;
+    /*font-family: slick;*/
     font-size: 6px;
     line-height: 20px;
     text-align: center;
@@ -5057,7 +5057,6 @@ a:active, a:focus, a:hover {
     left: 0;
     right: 0; 
     margin: auto;
-    z-index: 100;
     -webkit-transition: -webkit-transform .5s ease-out;
     transition: -webkit-transform .5s ease-out;
     -o-transition: transform .5s ease-out;
@@ -5075,6 +5074,7 @@ a:active, a:focus, a:hover {
     left: 0;
     right: 0;  
     bottom: 0;
+    z-index: 10;
 }
 
 .s-blog .blog-item .blog-title {
@@ -5544,6 +5544,7 @@ input, textarea {
     width: 100%;
     max-width: 100%;
     height: auto;
+    margin-bottom: 15px;
 }
 @media (max-width:991.98px) {
     .blog-item {
@@ -5668,13 +5669,19 @@ input, textarea {
 }
 .single-tour img {
     width: 100%}
+.single-tour .tour-wrap .tour-content p img.polovina, .single-tour .tour-wrap .tour-content p img.tret,.single-tour .tour-wrap .tour-content p img.chetvert {
+	width: 100%;
+	display: block;
+	height: auto;
+	margin: 0;
+}
 }@media (max-width:519.98px) {
-    .slick-next, .slick-prev {
-    background-color: transparent;
-    border: none;
-    -webkit-border-radius: 0;
-    border-radius: 0;
-    opacity: 1;
+.slick-next, .slick-prev {
+  background-color: transparent;
+  border: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  opacity: 1;
 }
 .slick-next:focus, .slick-next:hover, .slick-prev:focus, .slick-prev:hover {
     border-color: none;
@@ -5687,6 +5694,13 @@ input, textarea {
 }
 .main-header .contacts .contact-item.contact-time {
     display: none;
+}
+.icon-phone-life,  .icon-phone-kvs,  .icon-phone-mts  {  
+	width:  20px;  
+	height:  20px;  
+	margin-left: 22px;   
+	margin-top: 2px;
+    
 }
 .section-title h3 {
     font-size: 26px;
@@ -5747,36 +5761,25 @@ input, textarea {
     
 }
 
-.icon-phone-life,  .icon-phone-kvs,  .icon-phone-mts  {
-    
-	width:  25px;
-    
-	height:  25px;
-    
-	display:  inline-block;
-    
-	position:  absolute;
-    
-	margin-left:  10px;
-    
-	background-size:  cover;
+.icon-phone-life,  .icon-phone-kvs,  .icon-phone-mts  {  
+	width:  25px;  
+	height:  25px;  
+	display:  inline-block; 
+	position:  absolute;  
+	margin-left:  10px;   
+	background-size:  contain;
+	background-repeat: no-repeat;
     
 }
 
-.icon-phone-life  {
-    
-	background-image:  url(img/svg/life.svg);
-    
+.icon-phone-life  {  
+	background-image:  url(img/svg/life.svg);  
 }
-.icon-phone-kvs  {
-    
-	background-image:  url(img/svg/kstar.svg);
-    
+.icon-phone-kvs  { 
+	background-image:  url(img/svg/kstar.svg);  
 }
-.icon-phone-mts  {
-    
-	background-image:  url(img/svg/mts.svg);
-    
+.icon-phone-mts  {  
+	background-image:  url(img/svg/mts.svg);  
 }
 
 .p-item-img  {
@@ -5941,3 +5944,10 @@ p img  {
     
 }
  
+ /* Kostyl*/
+ .owl-carousel .owl-item {
+ 	height: 210px;
+ }
+.owl-carousel .owl-item img {
+	height: 100%;
+}

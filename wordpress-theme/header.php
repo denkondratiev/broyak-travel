@@ -20,9 +20,9 @@
 <body <?php body_class(); ?> style="background-color: <?php the_field('site_main_color', 'option'); ?>" >
 
     <div class="preloader">
-        <span></span>
-        <span></span>
-        <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
     
 <header class="page-main-head">

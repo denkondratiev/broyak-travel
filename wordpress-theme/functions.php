@@ -1,13 +1,4 @@
 <?php 
-	
-	 add_theme_support( 'post-thumbnails' );
-	 add_image_size( 'my_post_img', 1920, 9999 );
-	 add_filter( 'image_size_names_choose', 'my_custom_sizes' );
-		function my_custom_sizes( $sizes ) {
-			return array_merge( $sizes, array(
-				'my_post_img' => 'Мой размерчик',
-			) );
-		}
 
 	remove_action('wp_head', 'wp_generator');
 	remove_action('wp_head', 'wlwmanifest_link');
@@ -35,6 +26,7 @@ add_action('wp_print_styles', 'deregister_cf7_styles', 100);
 
 	function my_scripts_method(){
 		wp_enqueue_script( 'newscript', get_template_directory_uri() . '/js/scripts.min.js');
+		wp_enqueue_script( 'mask', get_template_directory_uri() . '/js/jquery.maskedinput.min.js');
 	}
 	add_action( 'wp_enqueue_scripts', 'my_scripts_method' );
 	
@@ -49,7 +41,7 @@ add_action('wp_print_styles', 'deregister_cf7_styles', 100);
 	
 	acf_add_options_sub_page(array(
 		'page_title' 	=> 'Настройки шапки',
-		'menu_title'	=> 'Шапка сайту',
+		'menu_title'	=> 'Хедер сайту',
 		'menu_slug' 	=> 'header',
 		'parent_slug'	=> 'theme-general-settings',
 	));
@@ -63,12 +55,11 @@ add_action('wp_print_styles', 'deregister_cf7_styles', 100);
 	
 	acf_add_options_sub_page(array(
 		'page_title' 	=> 'Настройки подвала',
-		'menu_title'	=> 'Подвал сайту',
+		'menu_title'	=> 'Футер сайту',
 		'menu_slug' 	=> 'footer',
 		'parent_slug'	=> 'theme-general-settings',
 	));
 	}
-
 
 	/**
  * Обрезка текста (excerpt). Шоткоды вырезаются. Минимальное значение maxchar может быть 22.

@@ -59,7 +59,7 @@
       	
       </footer>
 			
-			<div class="top" title="Догори"><i class="fa <?php the_field('up_button', 'option'); ?>"></i></div>
+			<div class="top" id="up-button" title="Догори"><i class="fa fa-angle-double-up"></i></div>
 
 <?php wp_footer();  ?>
 </body>

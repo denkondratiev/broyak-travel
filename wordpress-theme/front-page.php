@@ -25,7 +25,6 @@ console.log( "ready!" );
       while ( $my_query->have_posts() ) {
         $my_query->the_post();
           $tour_img = get_field('tour_img');
-          $slider_text = get_field('slider_text');
           $content = get_the_content(); 
   ?>
   <div class="slider-item" style="background-image: url(<?php echo $tour_img['sizes']['large']; ?>);">
@@ -33,8 +32,8 @@ console.log( "ready!" );
       <div class="row">
         <div class="col-8 offset-2 col-md-5 offset-md-7">
           <div class="slider-item-block">
-            <p><?php echo kama_excerpt( array('maxchar'=>65, $content) ); ?></p>
-            <p class="color-p"><?php echo $slider_text ?></p>
+            <p><?php echo the_field('slider_block_text') ?></p>
+            <p class="color-p"><?php echo the_field('slider_button_text'); ?></p>
             <a href="<?php the_permalink(); ?>" class="button">Детальніше</a>
           </div>
         </div>
@@ -85,12 +84,13 @@ console.log( "ready!" );
                   <a href="<?php the_permalink(); ?>"><div class="overlay-icon">+</div></a>
                   <div class="overlay-title">
                     <i class="fa fa-calendar" aria-hidden="true"></i>
-                    <span class="date"><?php echo $tour_date ?></span>
+                    <span class="date"><?php echo $tour_date ?></span><br>
+                    <span><?php the_title(); ?></span>
                   </div>
                 </div>
               </div>
             </div>
-             <img src="<?php echo $tour_img_card['sizes']['large'] ?>" alt="<?php echo the_title_attribute(); ?>">
+             <img src="<?php echo $tour_img_card['sizes']['medium'] ?>" alt="<?php echo the_title_attribute(); ?>">
             </div>
             <div class="item-info">
               <a href="<?php the_permalink(); ?>"><h4><?php the_title(); ?></h4></a>
@@ -142,13 +142,14 @@ console.log( "ready!" );
 
           <div class="owl-carousel">
             <?php foreach( $images as $image ): ?>
-              <img src="<?php echo $image['sizes']['large'] ?>" style="width: 100%; height: 220px;" alt="<?php echo the_title_attribute(); ?>">
+              <img src="<?php echo $image['sizes']['medium'] ?>" alt="<?php echo the_title_attribute(); ?>">
             <?php endforeach; ?>
           </div>
 
         <?php endif; ?><!--End of gallery-->
 
         </div>
+
       </div>
   </section>
 

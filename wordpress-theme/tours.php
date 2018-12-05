@@ -68,12 +68,13 @@ get_header();
                   <a href="<?php the_permalink(); ?>"><div class="overlay-icon">+</div></a>
                   <div class="overlay-title">
                     <i class="fa fa-calendar" aria-hidden="true"></i>
-                    <span class="date"><?php echo $tour_date ?></span>
+                    <span class="date"><?php echo $tour_date ?></span><br>
+                    <span><?php the_title(); ?></span>
                   </div>
                 </div>
               </div>
             </div>
-             <img src="<?php echo $tour_img_card['sizes']['large'] ?>" alt="">
+             <img src="<?php echo $tour_img_card['sizes']['medium'] ?>" alt="">
             </div>
             <div class="item-info">
               <a href="<?php the_permalink(); ?>"><h4><?php the_title(); ?></h4></a>
