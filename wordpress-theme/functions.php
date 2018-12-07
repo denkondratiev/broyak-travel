@@ -33,14 +33,14 @@ add_action('wp_print_styles', 'deregister_cf7_styles', 100);
 	if( function_exists('acf_add_options_page') ) {
 		acf_add_options_page(array(
 		'page_title' 	=> 'Головні настройки сайту',
-		'menu_title'	=> 'Головні настройки',
+		'menu_title'	=> 'Настройки головної сторінки',
 		'menu_slug' 	=> 'theme-general-settings',
 		'capability'	=> 'manage_options',
 		'redirect'		=> false
 	));
 	
 	acf_add_options_sub_page(array(
-		'page_title' 	=> 'Настройки шапки',
+		'page_title' 	=> 'Настройки хедера',
 		'menu_title'	=> 'Хедер сайту',
 		'menu_slug' 	=> 'header',
 		'parent_slug'	=> 'theme-general-settings',
@@ -54,7 +54,7 @@ add_action('wp_print_styles', 'deregister_cf7_styles', 100);
 	));
 	
 	acf_add_options_sub_page(array(
-		'page_title' 	=> 'Настройки подвала',
+		'page_title' 	=> 'Настройки футера',
 		'menu_title'	=> 'Футер сайту',
 		'menu_slug' 	=> 'footer',
 		'parent_slug'	=> 'theme-general-settings',

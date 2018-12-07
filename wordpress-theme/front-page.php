@@ -6,11 +6,11 @@
 get_header();
 ?>
 
-<script type="text/javascript">
-$( document ).ready(function() {
-console.log( "ready!" );
-});
-</script>
+<div class="preloader">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
 <section class="s-main slider">
   <?php                 

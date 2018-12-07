@@ -13,7 +13,7 @@ get_header();
       	<div class="formhead"><h3>Замовити тур</h3></div>
 
             <div class="callback">
-              <?php do_shortcode('[contact-form-7 id="366" title="Форма заявки"]'); ?>
+              <?php  echo do_shortcode('[contact-form-7 id="373" title="Форма заявки для сайту"]'); ?>
             </div>
 
 

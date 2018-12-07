@@ -6,7 +6,7 @@
               <div class="col-md-4 col-sm-6 col-12 order">
                 <div class="footer-column">
                   <img src="<?php the_field('site_logo', 'option'); ?>" class="logo-footer" alt="">
-                  <p></p>
+                  <p>&copy<?php echo the_field('copy', 'option') ?></p>
                   <div class="social">
       							<a href="<?php the_field('facebook_link', 'option'); ?>" target="blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
       							<a href="<?php the_field('instagram_link', 'option'); ?>" target="blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
