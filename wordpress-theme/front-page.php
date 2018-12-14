@@ -16,7 +16,7 @@ get_header();
   <?php                 
     $args = array(
         'post_type'     => 'tours',
-        'post_per_page' =>  3,
+        'posts_per_page' =>  3,
     );
 
     $my_query = new WP_Query( $args );
@@ -60,7 +60,7 @@ get_header();
                     
           $args = array(
               'post_type'     => 'tours',
-              'post_per_page' =>  6,
+              'posts_per_page' =>  6,
           );
 
           $my_query = new WP_Query( $args );
@@ -163,7 +163,7 @@ get_header();
         <?php            
           $args = array(
               'post_type' => 'blogs',
-              'post_per_page' => 3,
+              'posts_per_page' => 3,
           );
 
           $my_query = new WP_Query( $args );
