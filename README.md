@@ -2,4 +2,4 @@
 [DEMO LINK](https://broyak-travel.com.ua/)
 
 ## Stack
-HTML/SASS, JavaScript, Jquery, Bootstrap 3, Wordpress
+HTML/SASS, JavaScript, Jquery, Bootstrap 3, Gulp, Wordpress
